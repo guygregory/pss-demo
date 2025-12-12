@@ -3,9 +3,9 @@ import { winningLines, chooseAiMove } from "./utils.js";
 export class TicTacToe {
   constructor(onUpdate) {
     this.onUpdate = onUpdate;
-    this.scores = { X: 0, O: 0, draws: 0 };
+    this.scores = { "🎅": 0, "🎄": 0, draws: 0 };
     this.opponent = "human";
-    this.aiMark = "O";
+    this.aiMark = "🎄";
     this.resetRound(false);
   }
 
@@ -24,7 +24,7 @@ export class TicTacToe {
 
   resetRound(triggerUpdate = true) {
     this.board = Array(9).fill(null);
-    this.current = "X";
+    this.current = "🎅";
     this.winner = null;
     this.isDraw = false;
     this.winningLine = [];
@@ -33,7 +33,7 @@ export class TicTacToe {
   }
 
   resetScores() {
-    this.scores = { X: 0, O: 0, draws: 0 };
+    this.scores = { "🎅": 0, "🎄": 0, draws: 0 };
     this.resetRound();
   }
 
@@ -71,7 +71,7 @@ export class TicTacToe {
       this.isDraw = true;
       this.scores.draws += 1;
     } else {
-      this.current = this.current === "X" ? "O" : "X";
+      this.current = this.current === "🎅" ? "🎄" : "🎅";
     }
 
     this.onUpdate?.(this.getState());
@@ -94,7 +94,7 @@ export class TicTacToe {
   }
 
   humanMark() {
-    return this.aiMark === "X" ? "O" : "X";
+    return this.aiMark === "🎅" ? "🎄" : "🎅";
   }
 
   isLocked(index) {
