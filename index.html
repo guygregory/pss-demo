@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festive Tic Tac Toe</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="snow">
+  <main class="page">
+    <header class="hero" aria-label="Festive Tic Tac Toe">
+      <div class="hero__badge">Holiday Edition</div>
+      <h1>North Pole Tic Tac Toe</h1>
+      <p class="hero__subtitle">Warm cocoa, bright lights, and a quick game of cheer.</p>
+    </header>
+
+    <section class="panel" aria-label="Game controls and status">
+      <div class="panel__row">
+        <div class="status" aria-live="polite" data-status>Loading…</div>
+        <div class="controls">
+          <label class="control">
+            Opponent
+            <select data-opponent>
+              <option value="human">Two players</option>
+              <option value="ai">Elf helper (AI)</option>
+            </select>
+          </label>
+          <label class="control">
+            Snowfall
+            <input type="checkbox" checked aria-label="Toggle snowfall" data-snow>
+          </label>
+          <button class="btn" type="button" data-new-game>New Round</button>
+          <button class="btn btn--ghost" type="button" data-reset-scores>Reset Scores</button>
+        </div>
+      </div>
+
+      <div class="scores" aria-label="Scoreboard">
+        <div class="scorecard scorecard--x">
+          <div class="scorecard__label">Player X</div>
+          <div class="scorecard__value" data-score-x>0</div>
+        </div>
+        <div class="scorecard scorecard--o">
+          <div class="scorecard__label">Player O</div>
+          <div class="scorecard__value" data-score-o>0</div>
+        </div>
+        <div class="scorecard scorecard--draw">
+          <div class="scorecard__label">Ties</div>
+          <div class="scorecard__value" data-score-draw>0</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="board" aria-label="Tic Tac Toe board" role="grid">
+      <div class="board__grid">
+        <button class="cell" type="button" data-cell="0" role="gridcell" aria-label="Cell 1 empty"></button>
+        <button class="cell" type="button" data-cell="1" role="gridcell" aria-label="Cell 2 empty"></button>
+        <button class="cell" type="button" data-cell="2" role="gridcell" aria-label="Cell 3 empty"></button>
+        <button class="cell" type="button" data-cell="3" role="gridcell" aria-label="Cell 4 empty"></button>
+        <button class="cell" type="button" data-cell="4" role="gridcell" aria-label="Cell 5 empty"></button>
+        <button class="cell" type="button" data-cell="5" role="gridcell" aria-label="Cell 6 empty"></button>
+        <button class="cell" type="button" data-cell="6" role="gridcell" aria-label="Cell 7 empty"></button>
+        <button class="cell" type="button" data-cell="7" role="gridcell" aria-label="Cell 8 empty"></button>
+        <button class="cell" type="button" data-cell="8" role="gridcell" aria-label="Cell 9 empty"></button>
+      </div>
+    </section>
+
+    <section class="panel panel--info" aria-label="How to play">
+      <h2>How to play</h2>
+      <p>Take turns placing your mark. Three in a row wins: across, down, or diagonally. Toggle the snowfall, switch to the Elf helper AI, and keep score across rounds.</p>
+    </section>
+  </main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
