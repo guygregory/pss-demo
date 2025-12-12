@@ -23,7 +23,7 @@ export function pickRandom(list) {
 }
 
 // Lightweight AI: try to win, block, take center, corners, then any open cell.
-export function chooseAiMove(board, aiMark = "O", humanMark = "X") {
+export function chooseAiMove(board, aiMark = "🎄", humanMark = "🎅") {
   // 1) Win if possible
   for (const line of winningLines) {
     const [a, b, c] = line;

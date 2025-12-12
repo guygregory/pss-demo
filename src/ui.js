@@ -18,8 +18,8 @@ export function createUI() {
       const cell = cells[idx];
       if (!cell) return;
       cell.textContent = mark ? mark : "";
-      cell.classList.toggle("is-x", mark === "X");
-      cell.classList.toggle("is-o", mark === "O");
+      cell.classList.toggle("is-x", mark === "🎅");
+      cell.classList.toggle("is-o", mark === "🎄");
       cell.classList.toggle("is-win", winningLine.includes(idx));
       const status = mark ? `${mark} placed` : "empty";
       cell.setAttribute("aria-label", `Cell ${idx + 1} ${status}`);
@@ -39,8 +39,8 @@ export function createUI() {
       }
     }
 
-    if (scoreXEl) scoreXEl.textContent = scores.X;
-    if (scoreOEl) scoreOEl.textContent = scores.O;
+    if (scoreXEl) scoreXEl.textContent = scores["🎅"];
+    if (scoreOEl) scoreOEl.textContent = scores["🎄"];
     if (scoreDrawEl) scoreDrawEl.textContent = scores.draws;
   }
 
